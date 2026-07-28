@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;">VEG SHOP</h1>
+        <br>
+        <form onsubmit="handleAddVeg(event)">
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="name">
+        <br>
+        <br>
+        <label for="price">Price:</label>
+        <input id="price" type="number" name="price">
+        <br>
+        <br>
+        <label for="quantity">Quantity:</label>
+        <input id="quantity" type="text" name="number">
+        <br>
+        <br>
+        <button type="submit">ADD TO SHOP</button>
+        </form>
+        <br>
+        <br>
+        <ul id="ul"></ul>
+        <br>
+        <br>
+        <h1>Total: <span id="total">0</span></h1>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
