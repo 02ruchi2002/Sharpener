@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form onsubmit="handleAddProduct(event)">
+        <label for="price">Selling Price:</label>
+        <input id="price" type="number" name="price">
+        <br>
+        <br>
+        <label for="name">Product Name:</label>
+        <input id="name" type="text" name="name">
+        <br>
+        <br>
+        <button type="submit">ADD PRODUCT</button>
+        </form>
+        <br>
+        <br>
+        <h1>Products</h1>
+        <ul id="ul"></ul>
+        <br>
+        <br>
+        <h2>Total value worth of products Rs: <span id="total">0</span></h2>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
