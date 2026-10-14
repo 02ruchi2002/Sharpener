@@ -92,6 +92,7 @@ function display(expense){
 
 }
 
+
 function deleteExpense(id,liEle){
 
     let expenseList = JSON.parse(localStorage.getItem(EXPENSE_KEY))
