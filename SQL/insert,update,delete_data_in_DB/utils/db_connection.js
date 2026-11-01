@@ -1,7 +1,4 @@
-const express = require('express')
 const mysql = require('mysql2')
-
-const app = express();
 
 const connection = mysql.createConnection({
     host:'localhost',
@@ -17,10 +14,10 @@ connection.connect((err)=>{
    }
    console.log('connection has been created')
 
-   const creationQuery = `create table Students (
+   const creationQuery = `create table IF NOT EXISTS Students (
    id int auto_increment primary key,
    name varchar(20),
-   email varchar(20)
+   email varchar(255)
    )`
 
    connection.execute(creationQuery,(err)=>{
@@ -33,10 +30,4 @@ connection.connect((err)=>{
    })
 })
 
-app.get('/',(req,res)=>{
-   res.send('Hello world')
-})
-
-app.listen(3200,()=>{
-    console.log('server is runing')
-})
+module.exports = connection
