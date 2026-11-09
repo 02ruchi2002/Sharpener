@@ -15,7 +15,9 @@ const Students = sequelize.define('Students2',{
   email:{
     type:DataTypes.STRING,
     allowNull:false
-  }
+  },
+ }, {
+  tableName: 'students2'
 })
 
 module.exports = Students;
