@@ -1,10 +1,12 @@
 const express = require('express')
 const db = require('./utils/db_connection')
 const studentRoutes = require('./routes/studentsRoutes')
+const courseRoutes = require('./routes/courseRoutes')
 
-const studentsModel = require('./models/students')
+// const studentsModel = require('./models/students')
 
 require('./models')
+
 const app = express();
 
 app.use(express.json())
@@ -14,6 +16,7 @@ app.get('/',(req,res)=>{
 })
 
 app.use('/students',studentRoutes)
+app.use('/courses',courseRoutes)
 
 db.sync().then(()=>{
     app.listen(3200,(err)=>{
