@@ -2,6 +2,7 @@ const db = require('../utils/db_connection')
 const Student = require('../models/students')
 const IdentityCard = require('../models/identityCards')
 
+
 const addEnteries = async(req,res)=>{
   try {
     const {name,email} = req.body;
